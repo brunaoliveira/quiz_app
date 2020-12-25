@@ -3,9 +3,9 @@
 A Flutter project that consists in a trivia app for mobile devices.
 Despite Flutter's availability of full native performance on both iOS and Android, this project was not tested on iOS device or emulator.
 
-![alt text](https://github.com/brunaoliveira/quiz_app/blob/master/assets/screenshots/first_question.png)
-![alt text](https://github.com/brunaoliveira/quiz_app/blob/master/assets/screenshots/score_result.png)
-![alt text](https://github.com/brunaoliveira/quiz_app/blob/master/assets/screenshots/score_result_zero.png)
+First question             |  Score result             |  Zero Score Result          
+:-------------------------:|:-------------------------:|:-------------------------:
+![First question](https://github.com/brunaoliveira/quiz_app/blob/master/assets/screenshots/first_question.png)  |  ![Score result](https://github.com/brunaoliveira/quiz_app/blob/master/assets/screenshots/score_result.png)  |  ![Zeroed score result](https://github.com/brunaoliveira/quiz_app/blob/master/assets/screenshots/score_result_zero.png)
 
 ## Setup
 - [Flutter SDK](https://flutter.dev/docs/get-started/install)
