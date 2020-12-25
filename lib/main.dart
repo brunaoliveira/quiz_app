@@ -19,18 +19,107 @@ class _QuizAppState extends State<QuizApp> {
   Widget build(BuildContext context) {
     final List<Map<String, Object>> questions = [
       {
-        'text': 'What is your favourite colour?',
-        'answers': ['Black', 'Blue', 'Green', 'Pink']
+        'text':
+            'On a map with a scale of 1:25000, how many kilometers are represented by one centimeter?',
+        'answers': ['1', '2.5', '25', '25000']
       },
       {
-        'text': 'What is your favourite food?',
-        'answers': ['Barbecue', 'Pasta', 'Pizza', 'Sushi']
+        'text': 'What colour is the spot in the middle of the Japanese flag?',
+        'answers': ['White', 'Red', 'Maroon', 'Teal']
       },
       {
-        'text': 'What is your favourite animal?',
-        'answers': ['Cat', 'Dog', 'Horse', 'Rabbit']
+        'text':
+            'In which country would you be if you were visiting the Taj Mahal?',
+        'answers': ['Indonesia', 'Ireland', 'India', 'Israel']
+      },
+      {
+        'text': 'In which country is the world’s longest river, the Nile?',
+        'answers': ['Egypt', 'Brazil', 'Lybia', 'Russia']
+      },
+      {
+        'text':
+            'What does each star on the flag of the United States stand for?',
+        'answers': [
+          'Years of civil war',
+          'Number of states',
+          'Chapters in the Bible',
+          ''
+        ]
+      },
+      {
+        'text': 'The Danube flows into what body of water?',
+        'answers': ['Red Sea', 'Mediterranean Sea', 'Aral Sea', 'Black Sea']
+      },
+      {
+        'text': 'In which country is the worlds highest waterfall?',
+        'answers': ['Brazil', 'Venezuela', 'Canada', 'United States']
+      },
+      {
+        'text': 'What is the smallest country in the world?',
+        'answers': ['San Marino', 'Tuvalu', 'Monaco', 'Vatican City']
+      },
+      {
+        'text': 'What is the highest mountain in Britain?',
+        'answers': ['Ben Macdui', 'Ben Lawers', 'Ben Nevis', 'Beinn Mheadhoin']
+      },
+      {
+        'text': 'Which city would you visit to see Gaudi\'s architecture?',
+        'answers': ['Barcelona', 'Valencia', 'Madrid', 'Seville']
+      },
+      {
+        'text': 'What is the unit of currency of Poland?',
+        'answers': ['Krone', 'Złoty', 'Koruna', 'Haléř']
+      },
+      {
+        'text':
+            'By what name is the former country of South West Africa now known?',
+        'answers': ['Namibia', 'Lesoto', 'Congo', 'Rwanda']
+      },
+      {
+        'text': 'The Sahara Desert extends into how many countries?',
+        'answers': ['3', '5', '10', '13']
+      },
+      {
+        'text':
+            'Ship\'s captains are empowered to conduct two religious rites?',
+        'answers': [
+          'Burials and baptisms',
+          'Burials and wedings',
+          'Wedings and Bar Mitzvahs',
+          'Wedings and Bat Mitzvahs'
+        ]
+      },
+      {
+        'text': 'What is the world\'s largest continent?',
+        'answers': ['North America', 'Antarctica', 'Africa', 'Asia']
+      },
+      {
+        'text': 'In which country is the ancient city of Petra?',
+        'answers': ['Jordan', 'Israel', 'Egypt', 'Syria']
+      },
+      {
+        'text': 'What is the fastest flowing river in the world?',
+        'answers': ['Congo', 'Amazon', 'Orinoco', 'Ganges']
+      },
+      {
+        'text': 'What is the oldest active volcano on Earth?',
+        'answers': ['Mount Vesuvius', 'Kilawea', 'Mount Etna', 'Krakatoa']
+      },
+      {
+        'text': 'What is the largest city located on two continents?',
+        'answers': ['Orenburg', 'Suez', 'Cairo', 'Istanbul']
+      },
+      {
+        'text':
+            'What is the only territory of the mainland Americas that still belongs to a European country?',
+        'answers': ['Fawklands', 'Guadeloupe', 'French Guiana', 'Puerto Rico']
       },
     ];
+
+    List<Widget> possibleAnswers = [];
+    for (var textAnswer in questions[_selectedQuestion]['answers']) {
+      possibleAnswers.add(Answer(textAnswer, _answer));
+    }
 
     return MaterialApp(
       home: Scaffold(
@@ -40,10 +129,8 @@ class _QuizAppState extends State<QuizApp> {
         ),
         body: Column(
           children: [
-            Question(questions[_selectedQuestion]),
-            Answer('Answer 1', _answer),
-            Answer('Answer 2', _answer),
-            Answer('Answer 3', _answer),
+            Question(questions[_selectedQuestion]['text']),
+            ...possibleAnswers,
           ],
         ),
       ),
