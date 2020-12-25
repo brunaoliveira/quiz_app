@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './question.dart';
 import './answer.dart';
+import './result.dart';
 
 main() {
   runApp(QuizApp());
@@ -146,13 +147,7 @@ class _QuizAppState extends State<QuizApp> {
                       .toList(),
                 ],
               )
-            : Center(
-                // child: Text(
-                //   'Congratulations!',
-                //   style: TextStyle(fontSize: 34),
-                // ),
-                child: Image.asset('assets/dino.gif'),
-              ),
+            : Result(),
       ),
     );
   }
