@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './question.dart';
+import './answer.dart';
 
 main() {
   runApp(QuizApp());
@@ -12,7 +13,6 @@ class _QuizAppState extends State<QuizApp> {
     setState(() {
       _selectedQuestion++;
     });
-    print('Question answered!');
   }
 
   @override
@@ -32,18 +32,9 @@ class _QuizAppState extends State<QuizApp> {
         body: Column(
           children: [
             Question(questions[_selectedQuestion]),
-            RaisedButton(
-              child: Text('Answer 1'),
-              onPressed: _answer,
-            ),
-            RaisedButton(
-              child: Text('Answer 2'),
-              onPressed: _answer,
-            ),
-            RaisedButton(
-              child: Text('Answer 3'),
-              onPressed: _answer,
-            ),
+            Answer('Answer 1', _answer),
+            Answer('Answer 2', _answer),
+            Answer('Answer 3', _answer),
           ],
         ),
       ),
