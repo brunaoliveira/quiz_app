@@ -1,6 +1,7 @@
 # QUIZ
 
 A Flutter project that consists in a trivia app for mobile devices.
+Despite Flutter's availability of full native performance on both iOS and Android, this project was not tested on iOS device or emulator.
 
 
 ## Setup
@@ -8,6 +9,7 @@ A Flutter project that consists in a trivia app for mobile devices.
 - [Dart SDK](https://dart.dev/get-dart)
 - [Android SDK](https://developer.android.com/studio)
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [Android Virtual Device](https://developer.android.com/studio/run/managing-avds) or Android Physical Device
 
 
 ## How to run
