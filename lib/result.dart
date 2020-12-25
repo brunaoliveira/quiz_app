@@ -17,7 +17,8 @@ class Result extends StatelessWidget {
           ),
         ),
         Center(
-          child: Image.asset('assets/dino.gif'),
+          child: Image.asset(
+              totalScore > 0 ? 'assets/dino.gif' : 'assets/sad_dino.gif'),
         ),
         Container(
           padding: EdgeInsets.all(30),

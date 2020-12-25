@@ -46,6 +46,7 @@ flutter:
   assets:
     - assets/dino.gif
     - assets/giphy.gif
+    - assets/sad_dino.gif
 
   # To add assets to your application, add an assets section, like this:
   # assets:
