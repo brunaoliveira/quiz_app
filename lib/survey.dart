@@ -5,7 +5,7 @@ import 'question.dart';
 class Survey extends StatelessWidget {
   final List<Map<String, Object>> questions;
   final int selectedQuestion;
-  final void Function() onAnswer;
+  final void Function(int) onAnswer;
 
   Survey({
     @required this.questions,
@@ -19,15 +19,19 @@ class Survey extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> answers =
+    List<Map<String, Object>> answers =
         hasRemainingQuestion ? questions[selectedQuestion]['answers'] : null;
 
     return Column(
       children: [
         Question(questions[selectedQuestion]['text']),
         ...answers // spread operator
-            .map((text) => Answer(text, onAnswer))
-            .toList(),
+            .map((answer) {
+          return Answer(
+            answer['text'],
+            () => onAnswer(answer['score']),
+          );
+        }).toList(),
       ],
     );
   }
