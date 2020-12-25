@@ -29,6 +29,6 @@ First question             |  Score result             |  Zero Score Result
       ``` flutter emulator --launch <chosen_emulator> ```
 - Run project
 
-      ``` flutter run ```
+    ``` flutter run ```
 - Enjoy!
 
