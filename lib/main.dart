@@ -107,9 +107,11 @@ class _QuizAppState extends State<QuizApp> {
   ];
 
   void _answer() {
-    setState(() {
-      _selectedQuestion++;
-    });
+    if (hasRemainingQuestion) {
+      setState(() {
+        _selectedQuestion++;
+      });
+    }
   }
 
   bool get hasRemainingQuestion {
