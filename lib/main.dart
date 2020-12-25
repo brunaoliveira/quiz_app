@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import './question.dart';
-import './answer.dart';
 import './result.dart';
 import './survey.dart';
 
@@ -108,6 +106,10 @@ class _QuizAppState extends State<QuizApp> {
     },
   ];
 
+  bool get hasRemainingQuestion {
+    return _selectedQuestion < _questions.length;
+  }
+
   void _answer() {
     if (hasRemainingQuestion) {
       setState(() {
@@ -116,15 +118,8 @@ class _QuizAppState extends State<QuizApp> {
     }
   }
 
-  bool get hasRemainingQuestion {
-    return _selectedQuestion < _questions.length;
-  }
-
   @override
   Widget build(BuildContext context) {
-    List<String> answers =
-        hasRemainingQuestion ? _questions[_selectedQuestion]['answers'] : null;
-
     return MaterialApp(
       theme: ThemeData(
         // Define the default font family.
@@ -140,7 +135,11 @@ class _QuizAppState extends State<QuizApp> {
           backgroundColor: Colors.pink,
         ),
         body: hasRemainingQuestion
-            ? Survey(_questions[_selectedQuestion]['text'], answers, _answer)
+            ? Survey(
+                questions: _questions,
+                selectedQuestion: _selectedQuestion,
+                onAnswer: _answer,
+              )
             : Result(),
       ),
     );
