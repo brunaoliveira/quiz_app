@@ -223,7 +223,7 @@ class _QuizAppState extends State<QuizApp> {
     return MaterialApp(
       theme: ThemeData(
         // Define the default font family.
-        fontFamily: 'Georgia',
+        fontFamily: 'Calibri',
       ),
       home: Scaffold(
         appBar: AppBar(

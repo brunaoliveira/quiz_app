@@ -24,7 +24,8 @@ class Survey extends StatelessWidget {
 
     return Column(
       children: [
-        Question(questions[selectedQuestion]['text']),
+        Question(
+            '${selectedQuestion + 1}. ${questions[selectedQuestion]['text']}'),
         ...answers // spread operator
             .map((answer) {
           return Answer(

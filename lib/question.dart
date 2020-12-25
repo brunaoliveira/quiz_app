@@ -8,7 +8,7 @@ class Question extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: MediaQuery.of(context).size.height / 6,
+      height: MediaQuery.of(context).size.height / 5,
       margin: EdgeInsets.all(10),
       alignment: Alignment.center,
       child: Text(
