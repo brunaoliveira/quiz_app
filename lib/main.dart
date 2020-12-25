@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './question.dart';
 import './answer.dart';
 import './result.dart';
+import './survey.dart';
 
 main() {
   runApp(QuizApp());
@@ -139,14 +140,7 @@ class _QuizAppState extends State<QuizApp> {
           backgroundColor: Colors.pink,
         ),
         body: hasRemainingQuestion
-            ? Column(
-                children: [
-                  Question(_questions[_selectedQuestion]['text']),
-                  ...answers // spread operator
-                      .map((text) => Answer(text, _answer))
-                      .toList(),
-                ],
-              )
+            ? Survey(_questions[_selectedQuestion]['text'], answers, _answer)
             : Result(),
       ),
     );
