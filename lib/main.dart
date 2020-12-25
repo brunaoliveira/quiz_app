@@ -17,10 +17,19 @@ class _QuizAppState extends State<QuizApp> {
 
   @override
   Widget build(BuildContext context) {
-    final questions = [
-      'What is your favourite colour?',
-      'What is your favourite food?',
-      'What is your favourite animal?',
+    final List<Map<String, Object>> questions = [
+      {
+        'text': 'What is your favourite colour?',
+        'answers': ['Black', 'Blue', 'Green', 'Pink']
+      },
+      {
+        'text': 'What is your favourite food?',
+        'answers': ['Barbecue', 'Pasta', 'Pizza', 'Sushi']
+      },
+      {
+        'text': 'What is your favourite animal?',
+        'answers': ['Cat', 'Dog', 'Horse', 'Rabbit']
+      },
     ];
 
     return MaterialApp(
