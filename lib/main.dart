@@ -146,7 +146,13 @@ class _QuizAppState extends State<QuizApp> {
                       .toList(),
                 ],
               )
-            : null,
+            : Center(
+                // child: Text(
+                //   'Congratulations!',
+                //   style: TextStyle(fontSize: 34),
+                // ),
+                child: Image.asset('assets/dino.gif'),
+              ),
       ),
     );
   }
