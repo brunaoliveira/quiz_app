@@ -17,8 +17,10 @@ A Flutter project that consists in a trivia app for mobile devices.
 - Open project directory on VS Code or Android Studio
 - Fire emulator
   - List available emulators (this project was tested on Pixel_2_API_26 with Android 8)
+  
       ``` flutter emulators```
   - Launch emulator
+  
       ``` flutter emulator --launch <chosen_emulator> ```
 - Run project
       ``` flutter run ```
