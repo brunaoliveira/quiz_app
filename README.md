@@ -1,6 +1,6 @@
 # QUIZ
 
-A Flutter project that consists in a trivia app for mobile devices.
+A Flutter pet project that consists in a trivia app for mobile devices.
 Despite Flutter's availability of full native performance on both iOS and Android, this project was not tested on iOS device or emulator.
 
 First question             |  Score result             |  Zero Score Result          
