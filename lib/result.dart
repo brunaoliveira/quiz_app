@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
   final int totalScore;
+  final void Function() onRestartSurvey;
 
-  Result(this.totalScore);
+  Result(this.totalScore, this.onRestartSurvey);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,7 @@ class Result extends StatelessWidget {
               'Try again',
               style: TextStyle(fontSize: 22),
             ),
-            onPressed: () {},
+            onPressed: onRestartSurvey,
           ),
         ),
       ],

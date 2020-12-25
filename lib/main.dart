@@ -211,6 +211,13 @@ class _QuizAppState extends State<QuizApp> {
     }
   }
 
+  void _restartSurvey() {
+    setState(() {
+      _selectedQuestion = 0;
+      _totalScore = 0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -233,7 +240,7 @@ class _QuizAppState extends State<QuizApp> {
                 selectedQuestion: _selectedQuestion,
                 onAnswer: _answer,
               )
-            : Result(_totalScore),
+            : Result(_totalScore, _restartSurvey),
       ),
     );
   }
