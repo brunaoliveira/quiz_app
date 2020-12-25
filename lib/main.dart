@@ -116,10 +116,13 @@ class _QuizAppState extends State<QuizApp> {
       },
     ];
 
-    List<Widget> possibleAnswers = [];
-    for (var textAnswer in questions[_selectedQuestion]['answers']) {
-      possibleAnswers.add(Answer(textAnswer, _answer));
-    }
+    List<String> answers = questions[_selectedQuestion]['answers'];
+    List<Widget> answersWidgets =
+        answers.map((text) => Answer(text, _answer)).toList();
+
+    // for (var textAnswer in answers) {
+    //   answersWidgets.add(Answer(textAnswer, _answer));
+    // }
 
     return MaterialApp(
       home: Scaffold(
@@ -130,7 +133,7 @@ class _QuizAppState extends State<QuizApp> {
         body: Column(
           children: [
             Question(questions[_selectedQuestion]['text']),
-            ...possibleAnswers,
+            ...answersWidgets, // spread operator
           ],
         ),
       ),

@@ -8,10 +8,12 @@ class Question extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
+      height: MediaQuery.of(context).size.height / 7,
       margin: EdgeInsets.all(10),
+      alignment: Alignment.center,
       child: Text(
         text,
-        style: TextStyle(fontSize: 28),
+        style: TextStyle(fontSize: 26),
         textAlign: TextAlign.center,
       ),
     );
