@@ -13,7 +13,7 @@ class Result extends StatelessWidget {
         Container(
           padding: EdgeInsets.fromLTRB(0, 30, 0, 15),
           child: Text(
-            'Total points: ${totalScore * 100}',
+            'Total points: $totalScore/20 ',
             style: TextStyle(fontSize: 26),
           ),
         ),
