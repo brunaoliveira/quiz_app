@@ -1,6 +1,4 @@
-# QUIZ
-
-A Flutter pet project that consists in a trivia app for mobile devices.
+# TRIVIA
 
 
 [![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=brunaoliveira&repo=quiz_app&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
