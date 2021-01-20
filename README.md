@@ -1,6 +1,8 @@
 # QUIZ
 
 A Flutter pet project that consists in a trivia app for mobile devices.
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=brunaoliveira&repo=quiz_app&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
+
 Despite Flutter's availability of full native performance on both iOS and Android, this project was not tested on iOS device or emulator.
 
 First question             |  Score result             |  Zero Score Result          
